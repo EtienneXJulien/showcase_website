@@ -9,38 +9,38 @@ import { useRef, useEffect, useState } from "react";
 const services = [
   {
     icon: Smartphone,
-    title: "Mobile Development",
-    description: "Native and cross-platform mobile apps that deliver exceptional user experiences on iOS and Android.",
+    title: "Développement mobile",
+    description: "Applications mobiles natives et multiplateformes offrant des expériences utilisateur exceptionnelles sur iOS et Android.",
   },
   {
     icon: Code2,
-    title: "Web Applications",
-    description: "Scalable and performant web applications built with modern frameworks and best practices.",
+    title: "Applications Web",
+    description: "Applications web évolutives et performantes, conçues avec des frameworks modernes et les meilleures pratiques.",
   },
   {
     icon: Zap,
-    title: "Cloud Solutions",
-    description: "Cloud-native architecture and infrastructure to scale your business effortlessly.",
+    title: "Solutions Cloud",
+    description: "Architecture et infrastructure cloud-native pour faire évoluer votre entreprise sans effort.",
   },
   {
     icon: Users,
     title: "UX/UI Design",
-    description: "Beautiful, intuitive interfaces designed with your users in mind, backed by research and data.",
+    description: "Interfaces belles et intuitives conçues en tenant compte de vos utilisateurs, soutenues par la recherche et les données.",
   },
 ];
 
 const projects = [
-  { title: "FinTech Mobile App", category: "Mobile", image: "🏦" },
-  { title: "E-Commerce Platform", category: "Web", image: "🛒" },
-  { title: "Health & Fitness Tracker", category: "Mobile", image: "💪" },
-  { title: "SaaS Dashboard", category: "Web", image: "📊" },
+  { title: "Application de prise de rendez-vous", category: "Mobile", image: "🏦" },
+  { title: "Plateforme de commerce électronique", category: "Web", image: "🛒" },
+  { title: "Suivi de santé et de fitness", category: "Mobile", image: "💪" },
+  { title: "Tableau de bord SaaS", category: "Web", image: "📊" },
 ];
 
 const stats = [
-  { number: "150+", label: "Projects Delivered" },
-  { number: "50+", label: "Happy Clients" },
-  { number: "10+", label: "Years Experience" },
-  { number: "98%", label: "Client Satisfaction" },
+  { number: "150+", label: "Projets livrés" },
+  { number: "50+", label: "Clients satisfaits" },
+  { number: "10+", label: "Années d'expérience" },
+  { number: "98%", label: "Satisfaction client" },
 ];
 
 export default function Home() {
@@ -102,7 +102,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
       {/* Hero Section */}
-      <section ref={ref} className="relative flex min-h-[90vh] items-center px-4 py-20 md:px-6 lg:px-8">
+      <section ref={ref} className="relative flex min-h-[95vh] items-center px-4 py-20 md:px-6 lg:px-8">
         <div className="container mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-8">
             <motion.div
@@ -136,11 +136,11 @@ export default function Home() {
                 className="flex flex-col gap-4 sm:flex-row"
               >
                 <Button size="lg" className="group">
-                  Start Your Project
+                  Commencez votre projet
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
                 <Button size="lg" variant="outline">
-                  View Our Work
+                  Voir notre travail
                 </Button>
               </motion.div>
             </motion.div>
@@ -197,10 +197,11 @@ export default function Home() {
             className="mb-16 text-center"
           >
             <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl">
-              Our Services
+              Nos services
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              End-to-end development services tailored to bring your vision to life
+              Des solutions complètes pour répondre à tous vos besoins en développement
+              d'applications.
             </p>
           </motion.div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -212,7 +213,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
-                className="group rounded-lg border bg-card p-6 transition-shadow hover:shadow-lg"
+                className="cursor-pointer group rounded-lg border bg-card p-6 transition-shadow hover:shadow-lg"
               >
                 <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
                   <service.icon className="h-6 w-6" />
@@ -238,10 +239,10 @@ export default function Home() {
             className="mb-16 text-center"
           >
             <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl">
-              Featured Projects
+              Projets en vedette
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              Discover some of our recent work and success stories
+              Découvrez certains de nos travaux récents et histoires de réussite
             </p>
           </motion.div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -283,19 +284,19 @@ export default function Home() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="mb-6 text-3xl font-bold text-foreground md:text-4xl">
-                Why Choose itSquare?
+                Pourquoi choisir itSquare ?
               </h2>
               <p className="mb-8 text-lg text-muted-foreground">
-                We combine technical expertise with creative thinking to deliver 
-                exceptional results that exceed expectations.
+                Nous combinons expertise technique et pensée créative pour offrir 
+                des résultats exceptionnels qui dépassent les attentes.
               </p>
               <div className="space-y-4">
                 {[
-                  "Agile development methodology",
-                  "Transparent communication throughout",
-                  "Post-launch support and maintenance",
-                  "Competitive pricing without compromising quality",
-                  "Proven track record of successful deliveries",
+                  "Utilisation de la méthode agile pour des livraisons rapides",
+                  "Communication transparente tout au long du projet",
+                  "Support et maintenance après le lancement",
+                  "Tarification compétitive sans compromettre la qualité",
+                  "Historique éprouvé de livraisons réussies",
                 ].map((item, index) => (
                   <motion.div
                     key={item}
@@ -314,7 +315,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.6 }}
               className="relative flex items-center justify-center"
             >
@@ -335,9 +336,9 @@ export default function Home() {
                     className="rounded-lg bg-card p-6 shadow-md"
                   >
                     <Users className="mb-3 h-8 w-8 text-primary" />
-                    <h4 className="mb-2 font-semibold">Expert Team</h4>
+                    <h4 className="mb-2 font-semibold">Equipe d'experts</h4>
                     <p className="text-sm text-muted-foreground">
-                      Experienced developers and designers
+                      Développeurs et designers expérimentés
                     </p>
                   </motion.div>
                 </div>
@@ -368,7 +369,7 @@ export default function Home() {
               variant="secondary"
               className="group bg-primary-foreground text-primary hover:bg-primary-foreground/90"
             >
-              Get Started Today
+              Commencez Aujourd'hui
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button
@@ -376,7 +377,7 @@ export default function Home() {
               variant="outline"
               className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10"
             >
-              Schedule a Call
+              Programmer un Appel
             </Button>
           </div>
         </motion.div>
