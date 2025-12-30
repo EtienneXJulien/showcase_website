@@ -13,7 +13,7 @@ export async function sendContactEmail(formData: FormData) {
     try {
         await resend.emails.send({
             from: 'onboarding@resend.dev',
-            to: 'it.itsquare@outlook.com',
+            to: 'team.itsquare@outlook.com',
             subject: `Contact Form: ${subject}`,
             html: `
                 <h2>Nouveau message de contact</h2>

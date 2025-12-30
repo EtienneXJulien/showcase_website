@@ -114,7 +114,7 @@ export default function Contact() {
                                     </div>
                                     <div>
                                         <h3 className="font-medium">Email</h3>
-                                        <p className="text-gray-600 dark:text-gray-300">contact@elypso.com</p>
+                                        <p className="text-gray-600 dark:text-gray-300">team.itsquare@outlook.com</p>
                                     </div>
                                 </div>
 
@@ -126,7 +126,7 @@ export default function Contact() {
                                     </div>
                                     <div>
                                         <h3 className="font-medium">Téléphone</h3>
-                                        <p className="text-gray-600 dark:text-gray-300">+1 (555) 123-4567</p>
+                                        <p className="text-gray-600 dark:text-gray-300 select-none">+33 6 45 98 66 18</p>
                                     </div>
                                 </div>
 
@@ -140,9 +140,8 @@ export default function Contact() {
                                     <div>
                                         <h3 className="font-medium">Bureau</h3>
                                         <p className="text-gray-600 dark:text-gray-300">
-                                            123 Business Street<br />
-                                            Suite 100<br />
-                                            San Francisco, CA 94105
+                                            80 rue saint Georges<br />
+                                            54000, Nancy
                                         </p>
                                     </div>
                                 </div>
