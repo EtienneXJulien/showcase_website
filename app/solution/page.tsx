@@ -1,3 +1,3 @@
 export default function App() {
-    return <div>Solution Component</div>;
+    return <div className="strong">I'm your father</div>;
 }
