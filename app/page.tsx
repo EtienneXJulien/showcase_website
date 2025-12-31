@@ -4,6 +4,8 @@ import { motion, useScroll, useTransform, useMotionValue, useSpring } from "fram
 import { Code2, Smartphone, Zap, Users, CheckCircle2, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useRef, useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import MeshGradient from "@/components/MeshGradient";
 
 
 const services = [
@@ -22,11 +24,6 @@ const services = [
     title: "Solutions Cloud",
     description: "Architecture et infrastructure cloud-native pour faire évoluer votre entreprise sans effort.",
   },
-  {
-    icon: Users,
-    title: "UX/UI Design",
-    description: "Interfaces belles et intuitives conçues en tenant compte de vos utilisateurs, soutenues par la recherche et les données.",
-  },
 ];
 
 const projects = [
@@ -44,6 +41,7 @@ const stats = [
 ];
 
 export default function Home() {
+  const router = useRouter();
   const [scrollLocked, setScrollLocked] = useState(true);
   const [animationComplete, setAnimationComplete] = useState(false);
   const scrollProgress = useMotionValue(0);
@@ -103,6 +101,7 @@ export default function Home() {
     <div className="flex min-h-screen flex-col">
       {/* Hero Section */}
       <section ref={ref} className="relative flex min-h-[95vh] items-center px-4 py-20 md:px-6 lg:px-8">
+        <MeshGradient />
         <div className="container mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-8">
             <motion.div
@@ -135,12 +134,9 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="flex flex-col gap-4 sm:flex-row"
               >
-                <Button size="lg" className="group">
+                <Button size="lg" className="group hover:cursor-pointer" onClick={() => router.push('/contact')}>
                   Commencez votre projet
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
-                <Button size="lg" variant="outline">
-                  Voir notre travail
                 </Button>
               </motion.div>
             </motion.div>
@@ -204,7 +200,7 @@ export default function Home() {
               d'applications.
             </p>
           </motion.div>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -366,16 +362,9 @@ export default function Home() {
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
             <Button
               size="lg"
-              variant="secondary"
-              className="group bg-primary-foreground text-primary hover:bg-primary-foreground/90"
-            >
-              Commencez Aujourd'hui
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-            <Button
-              size="lg"
               variant="outline"
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10"
+              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 hover:cursor-pointer hover:text-secondary"
+              onClick={() => router.push('/contact')}
             >
               Programmer un Appel
             </Button>

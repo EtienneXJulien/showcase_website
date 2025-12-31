@@ -1,3 +1,3 @@
 export default function App() {
-    return <div className="strong">I'm your father</div>;
+    return <div className="h-screen">I'm your father</div>;
 }
